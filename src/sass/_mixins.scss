@@ -1,0 +1,13 @@
+@mixin bodysettings {
+    font: 100% "Space Mono", monospace;
+    color: #6b717f;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    overflow-x: hidden;
+}
+@mixin messagestyle {
+    border: 1px solid $grey;
+    padding: 16px;
+    color: $white;
+}

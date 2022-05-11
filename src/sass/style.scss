@@ -1,2 +1,100 @@
 @import url(_mixins.scss);
-@import url(_variables.scss);
+@import url(_variables.scss); 
+
+body {
+    @include bodysettings;
+
+    header{
+
+        h1{
+            text-align: center;
+            color: $pink;
+        }
+    }
+
+    main {
+        padding: 0 1em;
+
+        article {
+            display: flex;
+            flex-wrap: wrap;
+
+            #selling-points {
+                flex-grow: 2;
+                flex-basis: 100%;
+            }
+
+            section {
+                flex-grow: 1;
+                flex-basis: 45%;
+                border: 1px $grey solid;
+                -webkit-box-shadow: 10px 10px 15px -4px $greyer;
+                -moz-box-shadow: 10px 10px 15px -4px $greyer;
+                box-shadow: 10px 10px 15px -4px $greyer;
+                padding: 16px;
+                margin: 16px;
+                clear: both;
+                overflow: auto;
+                box-sizing: border-box;
+
+                h2{
+                    color: $pink ;
+                }
+
+                code {
+                    background: $black;
+                    border: 1px solid #6b717f;
+                    color: $grey;
+                    page-break-inside: avoid;
+                    font-family: monospace;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    margin-bottom: 1.6em;
+                    max-width: 100%;
+                    overflow: auto;
+                    padding: 1em 1.5em;
+                    display: block;
+                    word-wrap: break-word;
+                }
+
+                code.before {
+                    float: left;
+                    width: 40%;
+                }
+                code.after {
+                    float: right;
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 32px;
+    margin-bottom: 0px;
+    color: $pink ;
+}
+
+.messages {
+    padding: 16px;
+
+    .success {
+        background-color: $green;
+        @include messagestyle;
+    }
+    
+    .error {
+        @extend .success;
+        background-color: $red;
+    }
+    
+    .warning {
+        @extend .success;
+        background-color: $orange;
+    }
+}
+
+
