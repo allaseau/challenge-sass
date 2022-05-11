@@ -28,9 +28,7 @@ body {
                 flex-grow: 1;
                 flex-basis: 45%;
                 border: 1px $grey solid;
-                -webkit-box-shadow: 10px 10px 15px -4px $greyer;
-                -moz-box-shadow: 10px 10px 15px -4px $greyer;
-                box-shadow: 10px 10px 15px -4px $greyer;
+                @include shadowbox;
                 padding: 16px;
                 margin: 16px;
                 clear: both;
@@ -43,7 +41,7 @@ body {
 
                 code {
                     background: $black;
-                    border: 1px solid #6b717f;
+                    border: 1px solid $greyer;
                     color: $grey;
                     page-break-inside: avoid;
                     font-family: monospace;

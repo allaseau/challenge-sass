@@ -1,6 +1,8 @@
+@import url(_variables.scss);
+
 @mixin bodysettings {
     font: 100% "Space Mono", monospace;
-    color: #6b717f;
+    color: $greyer;
     margin: 0;
     padding: 0;
     background-color: $white;
@@ -10,4 +12,9 @@
     border: 1px solid $grey;
     padding: 16px;
     color: $white;
+}
+@mixin shadowbox{
+    -webkit-box-shadow: 10px 10px 15px -4px $greyer;
+    -moz-box-shadow: 10px 10px 15px -4px $greyer;
+    box-shadow: 10px 10px 15px -4px $greyer;
 }
